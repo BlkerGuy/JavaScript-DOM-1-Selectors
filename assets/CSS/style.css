@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Golos+Text:wght@400;500;600;700;800;900&family=Montserrat&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Golos+Text:wght@400;500;600;700;800;900&family=Montserrat&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Squada+One&family=Teko:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+}
+
+header {
+    border-bottom: 2px solid rgba(167, 175, 188, 255);
+    box-shadow: 0 4px 6px -6px #222;
+}
+
+header nav img {
+    height: 50px;
+    width: 120px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .nav-links {
+    width: 50%;
+}
+
+header nav .nav-links ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0px 25px 25px;
+}
+
+header nav .nav-links ul li {
+    display: block;
+}
+
+header nav .nav-links ul li,
+header nav .nav-links ul li a {
+    text-decoration: none;
+    color: black;
+    font: 500 25px 'Bebas Neue', cursive;
+}
+
+main section .main-upside {
+    text-align: center;
+}
+
+main section .main-upside h1 {
+    margin-top: 25px;
+    text-decoration: none;
+    font: 200 15px 'Bebas Neue', cursive;
+    color: #f0e30c;
+}
+
+main section .main-upside h2 {
+    width: 100%;
+    font: 200 40px 'Squada One', cursive;
+    letter-spacing: -1px;
+}
+
+main section .main-body {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 100px;
+}
+
+main section article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+}
+
+main section .main-body article .article-img {
+    width: 100%;
+    height: 270px;
+}
+
+main section .main-body article .article-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main section .main-body article .article-text {
+    padding: 25px 25px 15px;
+    border: 1px solid rgba(154, 145, 145, 0.5);
+
+}
+
+main section .main-body article .article-text span i {
+    color: yellow;
+    padding-right: 10px;
+}
+
+main section .main-body article .article-text span {
+    color: rgb(103, 105, 108);
+}
+
+main section .main-body article .article-text p {
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid rgba(167, 175, 188, 0.4);
+}
+
+main section .main-body article .article-text h3 {
+    padding-top: 15px;
+    font-family: 'Squada One', cursive;
+}
+
+main section .main-body article .article-text p {
+    padding-top: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main section .main-body article .article-text p span {
+    color: green;
+}
+
+main section .main-body article .article-text .location-date i {
+    padding-right: 5px;
+    color: #555151bd;
+
+}
+
+main section .main-body article .article-text .location-date .location i {
+    margin: 40px 0 0 20px;
+}
+
+.mobile-hamburger {
+    display: none;
+}
+.mobile-hamburger a i{
+    color: black;
+ }
+
+
+.mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    border-right: 1px solid black;
+    box-shadow: 1px 0 15px 2px black;
+    background-color: white;
+    animation-name: nav;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    display: none;
+}
+
+@keyframes nav {
+    from {
+        left: -300px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.mobile ul {
+    margin-top: 50px;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.mobile ul li {
+    margin-top: 20px;
+}
+
+.mobile ul li a {
+    text-decoration: none;
+    color: black;
+    padding:5px 10px;
+    font: 500 25px 'Bebas Neue', cursive;
+}
+.mobile ul li a:focus { 
+    background-color: black;
+    color: white;
+}
+
+.mobile.active {
+    display: block;
+}
+
